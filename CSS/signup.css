@@ -1,0 +1,15 @@
+.footer{
+    position:fixed;
+    bottom: 0;
+    width: 100vw;
+    text-align: center;
+    background-color: #000;
+    color:#fff;
+    font-size:14px;
+    margin-top: 400px;
+}
+.panel-title
+{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: 50px;
+}
