@@ -37,6 +37,7 @@ const employeeSchema = new mongoose.Schema({
 
 // creating a collection
 
+
 const Register=new mongoose.model("Register",employeeSchema);
 
 module.exports=Register;
