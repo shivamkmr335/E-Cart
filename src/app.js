@@ -30,6 +30,26 @@ app.get("/login",(req,res)=>{
     res.render("login") 
 });
 
+app.post("/login", async (req,res)=>{
+    try {
+        const email=req.body.email;
+        const thispassword= req.body.password;
+
+        const useremail=await Register.findOne({email});
+        console.log(useremail);
+
+        if(useremail.password === thispassword){
+            res.status(201).render("index");
+        }else{
+            res.send("Password are not matching");
+        }
+
+    } catch (error) {
+        res.status(400).send("This is a problem");
+        console.log(error);
+    }
+});
+
 app.post("/register", async(req,res)=>{
     try{
         const password=req.body.password;
