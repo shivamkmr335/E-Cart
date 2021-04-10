@@ -3,6 +3,9 @@ const app=express();
 const path=require("path");
 const hbs= require("hbs");
 
+require("./db/conn");
+const Register= require("./models/registers"); 
+const async = require("hbs/lib/async");
 
 const port=process.env.PORT || 3000;
 
@@ -26,11 +29,16 @@ app.get("/register",(req,res)=>{
     res.render("register")
 });
 
+app.get("/index",(req,res)=>{
+    res.render("index")
+});
+
 app.get("/login",(req,res)=>{
     res.render("login") 
 });
 
 app.post("/login", async (req,res)=>{
+    console.log("Yaha toh pahuch gaye");
     try {
         const email=req.body.email;
         const thispassword= req.body.password;
