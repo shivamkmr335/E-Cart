@@ -37,6 +37,18 @@ app.get("/login",(req,res)=>{
     res.render("login") 
 });
 
+app.get("/mens",(req,res)=>{
+    res.render("mens") 
+});
+
+app.get("/ladies",(req,res)=>{
+    res.render("ladies") 
+});
+
+app.get("/electronics",(req,res)=>{
+    res.render("electronics") 
+});
+
 app.post("/login", async (req,res)=>{
     console.log("Yaha toh pahuch gaye");
     try {

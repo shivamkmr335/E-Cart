@@ -1,58 +1,10 @@
-body
-{
-    width: 100%;
-    height: 100%;
-    margin: 0;
-}
-a
-{
-    text-decoration: none;
-    background-color: transparent;
-    color:#ededed;
-    text-align: right;
-}
-.header{
-    background-color: rgb(8, 8, 8);
-    color: white;
-    border-color: #181717;
-    min-height: 50px;
-    border: 1px soild transparent;
-}
-.inner-header
-{
-    width: 80%;
-    margin:auto;
-    text-align: left;
-}
-.logo
-{
-    float: left;
- height: 50px;
- padding: 15px;
- font-size: 20px;
- font-weight: bold;
- text-align: left;
-}
-.header-link{
-    float:right;
-    font-size:14px;
-    height: 50px;
-    padding: 15px 15px;
-    font-size:16px;
-    font-weight: bold;
-    text-align: right;
-}
-.content
-{
-    min-height: 600px;
-}
 .banner-image{
     padding-bottom: 50px;
     margin-bottom: 20px;
     text-align: center;
     color: #f8f8f8;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-image:url("/images/unnamed.jpg");
+    background-image:url("/image/unnamed.jpg");
     background-size: cover;
 }
 .inner-banner
@@ -67,19 +19,8 @@ a
     padding-bottom: 6%;
     overflow:hidden;
     margin-bottom: 12%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.356);
     max-width: 660px;
-}
-.button
-{
-    color: #fff;
- background-color: #c9302c;
- border-color: #ac2925;
- box-shadow: inset 0 3px 5px rgba(248, 241, 241, 0.575);
- padding: 10px 16px;
- font-size: 18px;
- border-radius: 6px;
-
 }
 .container
 {
@@ -95,8 +36,7 @@ a
     margin-bottom: 20px;
     line-height: 1.42857143;
     background-color: #fff;
-     border: 1px solid #ddd;
-    border-radius: 4px;
+    border: 3px solid rgb(231,231,231);
     float:left;
     margin-left:1%;
 }
@@ -109,7 +49,7 @@ a
 }
 .caption
 {
-    color:rgb(247, 102, 6);
+    color:tomato;
     padding:0px 10px 10px;
     font-weight: bold;
     text-align: center;
