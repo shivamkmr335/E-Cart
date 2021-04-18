@@ -1,0 +1,18 @@
+.footer
+{
+    position: fixed;
+	padding: 10px 0;
+	text-align: center;
+	bottom: 0;
+	background-color:#435560;
+	color:white;
+	width: 100%;
+}
+.nave{
+    background-color:#435560;
+}
+.jumbotron
+{
+    color: tomato;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

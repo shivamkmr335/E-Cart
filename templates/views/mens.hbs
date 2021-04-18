@@ -6,7 +6,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="./css/mens.css">
+		<link href="/css/mens.css" rel="stylesheet" type="text/css"/>
 	</head>
 	<body>
 		<nav class="nav navbar-fixed-top navbar-inverse nave">
@@ -21,9 +21,11 @@
 				</div>
 				<div class="collapse navbar-collapse" id="mynavBar">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
 						<li><a href="settings.html"><span class="glyphicon glyphicon-user"></span> Settings</a></li>
 						<li><a href="logout.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+						<li class="cart">
+                        	<a href="kart"><div class="glyphicon glyphicon-shopping-cart"></div> Cart <span class="inner">0</span></a>
+                    	</li>
 					</ul>
 				</div>
 			</div>
@@ -40,7 +42,7 @@
 						<div class="caption">
 							<h3>Shirt 1</h3>
 							<p>Price: <i class="fa fa-rupee"></i> 900</p>
-							<button type="button" class="btn btn-danger">Add to cart</button>
+							<a class="add-cart cart1" href="#">Add Cart</a>
 						</div>
 					</div>
 				</div>
@@ -50,27 +52,27 @@
 						<div class="caption">
 							<h3>Shirt 2</h3>
 							<p>Price: <i class="fa fa-rupee"></i> 1000</p>
-							<button type="button" class="btn btn-danger">Add to cart</button>
+							<a class="add-cart cart1" href="#">Add Cart</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6">
 					<div class="thumbnail">
-						<img src="D:\Ekart\E-kart\image\Shirts3.jpg" alt="Shirt">
+						<img src="./image/Shirts3.jpg" alt="Shirt">
 						<div class="caption">
 							<h3>Shirt 3</h3>
 							<p>Price: <i class="fa fa-rupee"></i> 1200</p>
-							<button type="button" class="btn btn-danger">Add to cart</button>
+							<a class="add-cart cart1" href="#">Add Cart</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6">
 					<div class="thumbnail">
-						<img src="D:\Ekart\E-kart\image\Shirts4.jpg" alt="Shirt">
+						<img src="./image/Shirts4.jpg" alt="Shirt">
 						<div class="caption">
 							<h3>Shirt 4</h3>
 							<p>Price: <i class="fa fa-rupee"></i> 800</p>
-							<button type="button" class="btn btn-danger">Add to cart</button>
+							<a class="add-cart cart1" href="#">Add Cart</a>
 						</div>
 					</div>
 				</div>
@@ -78,31 +80,31 @@
 			<div class="row text-center">
 				<div class="col-md-3 col-sm-6">
 					<div class="thumbnail">
-						<img src="D:\Ekart\E-kart\image\Shirts5.jpg" alt="Shirt">
+						<img src="./image/Shirts5.jpg" alt="Shirt">
 						<div class="caption">
 							<h3>Shirt 5</h3>
 							<p>Price: <i class="fa fa-rupee"></i> 700</p>
-							<button type="button" class="btn btn-danger">Add to cart</button>
+							<a class="add-cart cart1" href="#">Add Cart</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6">
 					<div class="thumbnail">
-						<img src="D:\Ekart\E-kart\image\Shirts6.jpg" alt="Shirt">
+						<img src="./image/Shirts6.jpg" alt="Shirt">
 						<div class="caption">
 							<h3>Shirt 6</h3>
 							<p>Price: <i class="fa fa-rupee"></i> 700</p>
-							<button type="button" class="btn btn-danger">Add to cart</button>
+							<a class="add-cart cart1" href="#">Add Cart</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6">
 					<div class="thumbnail">
-						<img src="D:\Ekart\E-kart\image\Shirts7.jpg" alt="Shirt">
+						<img src="./image/Shirts7.jpg" alt="Shirt">
 						<div class="caption">
 							<h3>Shirt 7</h3>
 							<p>Price: <i class="fa fa-rupee"></i> 700</p>
-							<button type="button" class="btn btn-danger">Add to cart</button>
+							<a class="add-cart cart1" href="#">Add Cart</a>
 						</div>
 					</div>
 				</div>
@@ -112,7 +114,7 @@
 						<div class="caption">
 							<h3>Shirt 8</h3>
 							<p>Price: <i class="fa fa-rupee"></i> 700</p>
-							<button type="button" class="btn btn-danger">Add to cart</button>
+							<a class="add-cart cart1" href="#">Add Cart</a>
 						</div>
 					</div>
 				</div>
@@ -124,7 +126,7 @@
 						<div class="caption">
 							<h3>Shirt 9</h3>
 							<p>Price: <i class="fa fa-rupee"></i> 1400</p>
-							<button type="button" class="btn btn-danger">Add to cart</button>
+							<a class="add-cart cart1" href="#">Add Cart</a>
 						</div>
 					</div>
 				</div>
@@ -134,7 +136,7 @@
 						<div class="caption">
 							<h3>Shirt 10</h3>
 							<p>Price: <i class="fa fa-rupee"></i> 600</p>
-							<button type="button" class="btn btn-danger">Add to cart</button>
+							<a class="add-cart cart1" href="#">Add Cart</a>
 						</div>
 					</div>
 				</div>
@@ -144,7 +146,7 @@
 						<div class="caption">
 							<h3>Shirt 11</h3>
 							<p>Price: <i class="fa fa-rupee"></i> 1300</p>
-							<button type="button" class="btn btn-danger">Add to cart</button>
+							<a class="add-cart cart1" href="#">Add Cart</a>
 						</div>
 					</div>
 				</div>
@@ -154,7 +156,7 @@
 						<div class="caption">
 							<h3>Shirt 12</h3>
 							<p>Price: <i class="fa fa-rupee"></i> 1200</p>
-							<button type="button" class="btn btn-danger">Add to cart</button>
+							<a class="add-cart cart1" href="#">Add Cart</a>
 						</div>
 					</div>
 				</div>
@@ -163,5 +165,83 @@
 		<footer class="footer">
 			Copyright<span class="glyphicon glyphicon-copyright-mark"></span>; EKart. All Rights Reserved.
 		</footer>
+
+		<script>
+			let carts=document.querySelectorAll('.add-cart');
+
+			let products=[
+				{
+					name: 'Shirt1',tag: 'greyshirt',price:15,inCart: 0
+				},{
+					name: 'Shirt2',tag: 'greyshirt',price:15,inCart: 0
+				},{
+					name: 'Shirt3',tag: 'greyshirt',price:15,inCart: 0
+				},{
+					name: 'Shirt4',tag: 'greyshirt',price:15,inCart: 0
+				},{
+					name: 'Shirt5',tag: 'greyshirt',price:15,inCart: 0
+				},{
+					name: 'Shirt6',tag: 'greyshirt',price:15,inCart: 0
+				},{
+					name: 'Shirt7',tag: 'greyshirt',price:15,inCart: 0
+				},{
+					name: 'Shirt8',tag: 'greyshirt',price:15,inCart: 0
+				},{
+					name: 'Shirt9',tag: 'greyshirt',price:15,inCart: 0
+				},{
+					name: 'Shirt10',tag: 'greyshirt',price:15,inCart: 0
+				},{
+					name: 'Shirt11',tag: 'greyshirt',price:15,inCart: 0
+				},{
+					name: 'Shirt12',tag: 'greyshirt',price:15,inCart: 0
+				}
+			
+			]
+
+			for (let i=0;i<carts.length; i++){
+			     carts[i].addEventListener('click',()=>{
+			         cartNumbers(products[i]);
+			     })
+			}
+
+			function onLoadCartNumbers(){
+			    let productNumbers=localStorage.getItem('cartNumber');
+			    if(productNumbers){
+			        document.querySelector('.cart span').textContent=productNumbers;
+			    }
+			}
+
+			function cartNumbers(product){
+			    let productNumbers=localStorage.getItem('cartNumber');
+			    productNumbers=parseInt(productNumbers);
+
+			    if(productNumbers){
+			        localStorage.setItem('cartNumber',productNumbers+1);
+			        document.querySelector('.cart span').textContent=productNumbers + 1;
+			    }
+			    else{
+			        localStorage.setItem('cartNumber',1);
+			        document.querySelector('.cart span').textContent=1;
+			    }
+
+				setItems(product);
+			}
+
+			function setItems(product){
+				let cartItems=localStorage.getItem('productsInCart');
+				cartItems=JSON.parse(cartItems);
+				console.log("Item in cart arte",cartItems);
+
+				product.inCart=1;
+				
+				cartItems={
+					[product.tag]:product
+				}
+
+				localStorage.setItem("productsInCart",JSON.stringify(cartItems));
+			}
+			onLoadCartNumbers();
+
+		</script>
 	</body>
 </html>
