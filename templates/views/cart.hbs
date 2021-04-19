@@ -20,14 +20,14 @@ crossorigin="anonymous">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="#" class="navbar-brand">Ekart</a>
+                <a href="home" class="navbar-brand">Ekart</a>
             </div>
             <div class="collapse navbar-collapse" id="mynavBar">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                     <li><a href="register"><span class="glyphicon glyphicon-user"></span> Register</a></li>
                     <li class="cart">
-                        <a href="kart"><span class="glyphicon glyphicon-shopping-cart"></span> Cart <span>0</span></a>
+                        	<a href="kart"><div class="glyphicon glyphicon-shopping-cart"></div> Cart <span class="inner">0</span></a>
                     </li>
                 </ul>
             </div>
@@ -44,9 +44,14 @@ crossorigin="anonymous">
 
         </div>
     </div>
-
+    {{>footer}}
     <script>
-
+        function onLoadCartNumbers(){
+			    let productNumbers=localStorage.getItem('cartNumber');
+			    if(productNumbers){
+			        document.querySelector('.cart span').textContent=productNumbers;
+			    }
+		}
         function displayCart(){
             let cartCost = localStorage.getItem('totalCost');
             let cartItems = localStorage.getItem('productsInCart');
@@ -60,14 +65,14 @@ crossorigin="anonymous">
                         <ion-icon name="close-circle-outline"></ion-icon>
                         <img src="/image/${item.tag}.jpg">
                         <span>${item.name}</span>
-                    <div class="price">${item.price}.00 $</div>
+                    <div class="price">${item.price}.00 ₹</div>
                     <div class="quantitty">
                         <ion-icon name="remove-circle-outline"></ion-icon>
                         <span>${item.inCart}</span>
                         <ion-icon name="add-circle-outline"></ion-icon>
                     </div>
                     <div class="total">
-                        ${item.inCart * item.price}.00 $
+                        ${item.inCart * item.price}.00 ₹
                     </div>
                     `;
                 });
@@ -78,13 +83,14 @@ crossorigin="anonymous">
                             Basket Total
                         </h4>
                         <h4 class="basketTotal">
-                            ${cartCost}.00 $
+                            ${cartCost} ₹
                         </h4>
                     </div>
                 `;
             }
         }
         displayCart();
+        onLoadCartNumbers();
     </script>
     <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 </body>
