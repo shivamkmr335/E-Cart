@@ -37,6 +37,10 @@ app.get("/login",(req,res)=>{
     res.render("login") 
 });
 
+app.get("/kart",(req,res)=>{
+    res.render("cart") 
+});
+
 app.get("/mens",(req,res)=>{
     res.render("mens") 
 });

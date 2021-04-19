@@ -38,7 +38,7 @@
 			<div class="row text-center">
 				<div class="col-md-3 col-sm-6">
 					<div class="thumbnail">
-						<img src="./image/Shirts 22.jpg" alt="shirt">
+						<img src="./image/Shirts1.jpg" alt="shirt">
 						<div class="caption">
 							<h3>Shirt 1</h3>
 							<p>Price: <i class="fa fa-rupee"></i> 900</p>
@@ -48,7 +48,7 @@
 				</div>
 				<div class="col-md-3 col-sm-6">
 					<div class="thumbnail">
-						<img src="./image/Shirts 1.jpg" alt="Shirt">
+						<img src="./image/Shirts2.jpg" alt="Shirt">
 						<div class="caption">
 							<h3>Shirt 2</h3>
 							<p>Price: <i class="fa fa-rupee"></i> 1000</p>
@@ -110,7 +110,7 @@
 				</div>
 				<div class="col-md-3 col-sm-6">
 					<div class="thumbnail">
-						<img src="./image/Shirts 8.jpg" alt="Shirt">
+						<img src="./image/Shirts8.jpg" alt="Shirt">
 						<div class="caption">
 							<h3>Shirt 8</h3>
 							<p>Price: <i class="fa fa-rupee"></i> 700</p>
@@ -122,7 +122,7 @@
 			<div class="row text-center">
 				<div class="col-md-3 col-sm-6">
 					<div class="thumbnail">
-						<img src="./image/Shirts 9.jpg" alt="Shirt">
+						<img src="./image/Shirts9.jpg" alt="Shirt">
 						<div class="caption">
 							<h3>Shirt 9</h3>
 							<p>Price: <i class="fa fa-rupee"></i> 1400</p>
@@ -132,7 +132,7 @@
 				</div>
 				<div class="col-md-3 col-sm-6">
 					<div class="thumbnail">
-						<img src="./image/Shirts 10.jpg" alt="Shirt">
+						<img src="./image/Shirts10.jpg" alt="Shirt">
 						<div class="caption">
 							<h3>Shirt 10</h3>
 							<p>Price: <i class="fa fa-rupee"></i> 600</p>
@@ -142,7 +142,7 @@
 				</div>
 				<div class="col-md-3 col-sm-6">
 					<div class="thumbnail">
-						<img src="image/Shirts 11.jpg" alt="Shirt">
+						<img src="image/Shirts11.jpg" alt="Shirt">
 						<div class="caption">
 							<h3>Shirt 11</h3>
 							<p>Price: <i class="fa fa-rupee"></i> 1300</p>
@@ -152,7 +152,7 @@
 				</div>
 				<div class="col-md-3 col-sm-6">
 					<div class="thumbnail">
-						<img src="./image/Shirts 32.jpg" alt="Shirt">
+						<img src="./image/Shirts12.jpg" alt="Shirt">
 						<div class="caption">
 							<h3>Shirt 12</h3>
 							<p>Price: <i class="fa fa-rupee"></i> 1200</p>
@@ -171,39 +171,39 @@
 
 			let products=[
 				{
-					name: 'Shirt1',tag: 'greyshirt',price:15,inCart: 0
+					name: 'Shirt1',tag: 'Shirts1',price:5,inCart: 0
 				},{
-					name: 'Shirt2',tag: 'greyshirt',price:15,inCart: 0
+					name: 'Shirt2',tag: 'Shirts2',price:10,inCart: 0
 				},{
-					name: 'Shirt3',tag: 'greyshirt',price:15,inCart: 0
+					name: 'Shirt3',tag: 'Shirts3',price:15,inCart: 0
 				},{
-					name: 'Shirt4',tag: 'greyshirt',price:15,inCart: 0
+					name: 'Shirt4',tag: 'Shirts4',price:20,inCart: 0
 				},{
-					name: 'Shirt5',tag: 'greyshirt',price:15,inCart: 0
+					name: 'Shirt5',tag: 'Shirts5',price:25,inCart: 0
 				},{
-					name: 'Shirt6',tag: 'greyshirt',price:15,inCart: 0
+					name: 'Shirt6',tag: 'Shirts6',price:30,inCart: 0
 				},{
-					name: 'Shirt7',tag: 'greyshirt',price:15,inCart: 0
+					name: 'Shirt7',tag: 'Shirts7',price:35,inCart: 0
 				},{
-					name: 'Shirt8',tag: 'greyshirt',price:15,inCart: 0
+					name: 'Shirt8',tag: 'Shirts8',price:40,inCart: 0
 				},{
-					name: 'Shirt9',tag: 'greyshirt',price:15,inCart: 0
+					name: 'Shirt9',tag: 'Shirts9',price:45,inCart: 0
 				},{
-					name: 'Shirt10',tag: 'greyshirt',price:15,inCart: 0
+					name: 'Shirt10',tag: 'Shirts10',price:50,inCart: 0
 				},{
-					name: 'Shirt11',tag: 'greyshirt',price:15,inCart: 0
+					name: 'Shirt11',tag: 'Shirts11',price:55,inCart: 0
 				},{
-					name: 'Shirt12',tag: 'greyshirt',price:15,inCart: 0
+					name: 'Shirt12',tag: 'Shirts12',price:60,inCart: 0
 				}
-			
 			]
-
+			// Adding Event Listeners to all the products
 			for (let i=0;i<carts.length; i++){
 			     carts[i].addEventListener('click',()=>{
 			         cartNumbers(products[i]);
+					 totalCost(products[i]);
 			     })
 			}
-
+			// To load No of items in cart whenever page is reloaded
 			function onLoadCartNumbers(){
 			    let productNumbers=localStorage.getItem('cartNumber');
 			    if(productNumbers){
@@ -211,6 +211,7 @@
 			    }
 			}
 
+			// To calculate the number of products added in the cart
 			function cartNumbers(product){
 			    let productNumbers=localStorage.getItem('cartNumber');
 			    productNumbers=parseInt(productNumbers);
@@ -227,19 +228,41 @@
 				setItems(product);
 			}
 
+			// To add JSON files into local storage whenever a new product is added to the cart
 			function setItems(product){
 				let cartItems=localStorage.getItem('productsInCart');
 				cartItems=JSON.parse(cartItems);
-				console.log("Item in cart arte",cartItems);
 
-				product.inCart=1;
-				
-				cartItems={
-					[product.tag]:product
+				if(cartItems != null){
+					if(cartItems[product.tag] == undefined){
+						cartItems={
+							...cartItems,
+							[product.tag]: product
+						}
+					}
+					cartItems[product.tag].inCart +=1;
+				}
+				else{
+					product.inCart = 1;
+					cartItems = {
+						[product.tag]: product
+					}
 				}
 
 				localStorage.setItem("productsInCart",JSON.stringify(cartItems));
 			}
+
+			function totalCost(product){
+				let cartCost=localStorage.getItem('totalCost');
+
+				if(cartCost != null){
+					cartCost=parseInt(cartCost);
+					localStorage.setItem('totalCost', cartCost + product.price);
+				}else{
+					localStorage.setItem('totalCost',product.price);
+				}
+			}
+
 			onLoadCartNumbers();
 
 		</script>
