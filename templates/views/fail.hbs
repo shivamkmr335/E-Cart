@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link 
+rel="stylesheet" 
+href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
+integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" 
+crossorigin="anonymous">
+		{{!-- <link href="/css/style.css" rel="stylesheet" type="text/css"/> --}}
+		{{!-- <link href="/css/login.css" rel="stylesheet" type="text/css"/> --}}
+    <style>
+        body{
+            align-items: center;
+            
+        }
+        #mainn{
+            font-size: xx-large;
+            text-align: center;
+            padding: 80px;
+            height: 40vh;
+            width: 40vw;
+            margin: 35vh 30vw;
+            border: 2px solid rgb(241, 49, 15);
+            background-color: rgb(243, 157, 44);
+        }
+        .alert{
+            text-decoration: solid;
+            font-size: larger;
+        }
+        #btnn{
+            text-decoration: none;
+            padding: 10px;
+            background-color: aliceblue;
+            border: 2px solid grey;
+        }
+    </style>
+    <link href="/css/style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <nav class="nav navbar-fixed-top navbar-inverse nave">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynavBar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="start" class="navbar-brand">Ekart</a>
+				</div>
+				<div class="collapse navbar-collapse" id="mynavBar">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="register"><span class="glyphicon glyphicon-user"></span>Register</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+    <div id="mainn">
+        <div class="alert">
+            Invalid Mail Or Password
+        </div>
+        <dir id="btnn">
+            <a href="login"><b>Try Again</b></a>
+        </dir>
+    </div>
+</body>
+</html>

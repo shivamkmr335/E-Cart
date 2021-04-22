@@ -19,14 +19,12 @@ crossorigin="anonymous">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="home" class="navbar-brand">Ekart</a>
+                <a href="#" class="navbar-brand">Ekart</a>
             </div>
             <div class="collapse navbar-collapse" id="mynavBar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="logout" ><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
-                    <li class="cart">
-                        	<a href="kart"><div class="glyphicon glyphicon-shopping-cart"></div> Cart <span class="inner">0</span></a>
-                    </li>
+                    <li><a href="login" ><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li><a href="register" ><span class="glyphicon glyphicon-user"></span> Register</a></li>
                 </ul>
             </div>
         </div>
@@ -37,7 +35,7 @@ crossorigin="anonymous">
                 <center>
                     <div class="banner-content">
                         <h1>Welcome to E-Kart</h1>
-                        <a href="login" target="_blank">
+                        <a href="login">
                             <center>
                                 <button class="btn btn-danger btn-lg active">Shop Now</button>
                             </center>
@@ -52,8 +50,8 @@ crossorigin="anonymous">
             <a href="#">
                 <img src="/image/le_reve_1_0.jpg" alt="Mens Collection" class="thumbnail">
                     <div class="caption">         
-                        <a href="mens">
-                            <button class="btn btn-danger btn-lg active">Men's Collections</button>
+                        <a href="#" class="alert">
+                            <button class=" btn btn-danger btn-lg active">Men's Collections</button>
                         </a>
                         <p></p>
                     </div>
@@ -63,7 +61,7 @@ crossorigin="anonymous">
             <a href="#">
                 <img src="/image/unnamed (1).jpg" alt="Ladies Collection" class="thumbnail">
                     <div class="caption">         
-                        <a href="ladies">
+                        <a href="#" class="alert">
                             <button class="btn btn-danger btn-lg active">Ladies Collections</button>
                         </a>
                         <p></p>
@@ -74,7 +72,7 @@ crossorigin="anonymous">
             <a href="#">
                 <img src="/image/camera.jpg" alt="Electronics Collection" class="thumbnail">
                     <div class="caption">         
-                        <a href="electronics">
+                        <a href="#" class="alert">
                             <button class="btn btn-danger btn-lg active">Electronics Collections</button>
                         </a>
                         <p></p>
@@ -82,15 +80,6 @@ crossorigin="anonymous">
             </a>
         </div>
     </div>
-    {{>footer}}
-    <script>
-        function onLoadCartNumbers(){
-			    let productNumbers=localStorage.getItem('cartNumber');
-			    if(productNumbers){
-			        document.querySelector('.cart span').textContent=productNumbers;
-			    }
-		}
-        onLoadCartNumbers();
-    </script>
+    {{>footer2}}
 </body>
 </html>

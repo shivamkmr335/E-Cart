@@ -22,7 +22,11 @@ app.set("views",template_path);
 hbs.registerPartials(partials_path);
 
 app.get("/",(req,res)=>{
-    res.render("index");
+    res.render("start");
+});
+
+app.get("/start",(req,res)=>{
+    res.render("start");
 });
 
 app.get("/home",(req,res)=>{
@@ -39,6 +43,10 @@ app.get("/index",(req,res)=>{
 
 app.get("/login",(req,res)=>{
     res.render("login") 
+});
+
+app.get("/logout",(req,res)=>{
+    res.render("start");
 });
 
 app.get("/kart",(req,res)=>{
@@ -67,9 +75,9 @@ app.post("/login", async (req,res)=>{
         console.log(useremail);
 
         if(useremail.password === thispassword){
-            res.status(201).render("index");
+            res.status(201).render("success");
         }else{
-            res.send("Password are not matching");
+            res.render("fail");
         }
 
     } catch (error) {

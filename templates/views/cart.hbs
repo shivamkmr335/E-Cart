@@ -24,8 +24,7 @@ crossorigin="anonymous">
             </div>
             <div class="collapse navbar-collapse" id="mynavBar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                    <li><a href="register"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+                    <li><a href="logout" ><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
                     <li class="cart">
                         	<a href="kart"><div class="glyphicon glyphicon-shopping-cart"></div> Cart <span class="inner">0</span></a>
                     </li>
@@ -55,7 +54,9 @@ crossorigin="anonymous">
         function displayCart(){
             let cartCost = localStorage.getItem('totalCost');
             let cartItems = localStorage.getItem('productsInCart');
+            console.log(cartItems);
             cartItems = JSON.parse(cartItems);
+            console.log(cartItems);
             let productContainer=document.querySelector(".products");
             if(cartItems && productContainer){
                 productContainer.innerHTML='';
@@ -64,6 +65,7 @@ crossorigin="anonymous">
                     <div class="product">
                         <ion-icon name="close-circle-outline"></ion-icon>
                         <img src="/image/${item.tag}.jpg">
+
                         <span>${item.name}</span>
                     <div class="price">${item.price}.00 ₹</div>
                     <div class="quantitty">

@@ -7,9 +7,9 @@
             <section class="link1">
                 <h2>CATEGORIES </h2>
                 <ul>
-                    <li><a href="mens">MENS SECTION</a></li>
-                    <li><a href="ladies">WOMAN SECTION</a></li>
-                    <li><a href="electronics">ELECTRONICS</a></li>
+                    <li><a href="#" class="alert">MENS SECTION</a></li>
+                    <li><a href="#" class="alert">WOMAN SECTION</a></li>
+                    <li><a href="#" class="alert">ELECTRONICS</a></li>
             </section>
             <section class="link2">
                 <h2>QUICK LINKS</h2>
@@ -54,4 +54,12 @@
                 <a href="https://www.beta-labs.in">Majak</a>
             </p>
         </section>
+        <script>
+        let carts=document.querySelectorAll('.alert');
+        for (let i=0;i<carts.length; i++){
+			     carts[i].addEventListener('click',()=>{
+			         alert('Please LogIn or Register');
+			     })
+			}
+        </script>
     </footer>
